@@ -1,0 +1,29 @@
+@charset "UTF-8" 
+/*@charset = Regra para acentuação*/
+/*
+  em HTML é Id = em CSS é #
+  em HTML é Class = em CSS é .
+*/
+body{
+    background-color: rgb(248, 250, 225);
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+h1{
+    color: rgb(99, 47, 12);
+}
+#principal{
+    text-align: center;
+    color: rgb(255, 255, 255);
+    font-size: 3em;
+    background-color: rgb(99, 47, 12);
+}
+/*Seletor personalizado*/
+.basico{
+    color: rgb(47, 117, 47);
+}
+.intermediario{
+    color: rgb(107, 91, 0);
+}
+.Avancado{
+    color: rgb(156, 23, 0);
+}

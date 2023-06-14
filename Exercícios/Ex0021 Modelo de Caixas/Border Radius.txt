@@ -1,0 +1,30 @@
+Podemos criar caixas com pontas arredondadas, caixas com vértices arredondados... Para fazer isso utilizamos a Propriedade de Estilo " border-radius ".
+
+Propriedades - border-radius: As principais Propriedades de Estilo para Vértices Arredondados (border-radius) são: 
+
+border-top-left-radius (arredondamento da parte superior esquerda da box)
+
+border-top-right-radius (arredondamento da parte superior direita da box)
+
+border-bottom-right-radius (arredondamento da parte inferior direita da box)
+
+border-bottom-left-radius (arredondamento da parte inferior esquerda da box) 
+
+Existe um SENTIDO/ORDEM correta PARA INSERIR as propriedades border-radius descritas acima. A "direção" correta é: 
+
+1) - Top Left - Superior Esquerda  
+2) - Top Right - Superior Direita
+3) - Bottom Right - Inferior Direita
+4) - Bottom Left - Inferior Esquerda
+
+Também podemos utilizar uma SHORTHAND para inserir e simplificar todas essas declarações de border-radius em uma única linha, exemplo: " border-radius: 15px 10px 15px 10px; "
+
+OBSERVAÇÃO: Mesmo em shorthands como a do exemplo acima, os valores devem ser declarados na ordem orientada (Top Left, Top Right, Bottom Right e Bottom Left), para que consigamos nos nortear e especificar corretamente o arredondamento certo para o respectivo lado/sentido.
+
+Se quisermos configurar os quatro lados do border-radius de uma só vez e constituir um border-radius igualitário (mesmo valor nos quatro lados), podemos simplesmente inserir uma única vez a Propriedade "border-radius" com o valor em px desejado, esse valor será inserido nos quatro lados do elemento automaticamente, exemplo: " border-radius: 10px; "
+
+Também podemos colocar só dois valores em uma propriedade border-radius, exemplo: " border-radius: 10px 20px; " - Quando colocamos somente dois valores, significa que os sentidos SUPERIOR ESQUERDO E INFERIOR DIREITO são representados pelo primeiro valor e os sentidos SUPERIOR DIREITO E INFERIOR ESQUERDO são representados pelo segundo valor.
+
+NOTA: O design prima pela discrição, então cuidado para não exagerar ao utilizar bordas arredondadas.
+
+Quando temos um elemento na forma QUADRADA, uma <div> com altura e largura de 100px por exemplo, podemos transformar esses elementos quadrados em um círculo/bola com a Propriedade de Estilo " border-radius " com o valor " 50% " ou " 100px ".

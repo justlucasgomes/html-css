@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alinhamentos</title>
+    <style>
+    /* Basicamente temos quatro tipos de Alinhamento de Texto: 
+
+	- Alinhamento à esquerda
+	- Alinhamento à direita 
+	- Centralizado
+	- Justify
+
+Os textos no HTML (p, h1, h2 e etc.) já vem por padrão alinhados à esquerda da tela, mas se quisermos mudar esse alinhamento, devemos usar a Propriedade de Estilo "text-align", os valores mais comuns dessa propriedade são: center, right, left e justify
+
+O valor "center" alinha o texto no centro da tela, o valor "right" alinha o texto na parte direita da tela, o valor "left" alinha o texto na parte esquerda da tela... Sendo que o texto de PARÁGRAFOS normalmente tem um alinhamento nos DOIS LADOS, à esquerda e à direita... que é a função fundamental do valor "justify".
+
+Existe uma Propriedade de Estilo chamada "text-indent", que é responsável por dar aquele recuo no início de um parágrafo: Geralmente colocamos o valor dessa propriedade como "30px" de recuo.*/ 
+    body{ 
+        font: normal 16px Arial, Verdana, Serif;
+        text-align: left;
+    }
+    h1 {
+        text-align: center;
+    }
+    h2 {
+        text-align: right;
+    }
+    p {
+        text-align: justify;
+        text-indent: 30px;
+    }
+    </style>
+</head>
+<body>
+    <h1>Tipos de Alinhamento</h1>
+    <h2>Titulo</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, voluptas eaque obcaecati neque perferendis facere voluptatem porro nemo tempore minima sunt, vel delectus molestias distinctio eius similique ea libero optio. Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni, doloribus optio unde magnam dignissimos pariatur voluptatum eos, exercitationem dicta ea blanditiis totam provident hic nulla saepe distinctio ut vitae voluptate. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi quaerat quo, repellat sint, quas exercitationem blanditiis ipsum cumque dicta alias nobis illo, neque autem labore quibusdam magnam at aliquam. Iure.</p>
+</body>
+</html>
