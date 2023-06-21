@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Posição dos Fundos</title>
+    <style>
+        body{
+            margin: 20px;
+            padding: 20px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        div.bloco{
+            background-image: url(image/wallpaper002.jpg);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-color: black;
+            height: 200px;
+            width: 1280px;
+            border: 1px solid black;
+            border-radius: 10px;
+            margin: 10px;
+        }
+        div#q1{background-position: center 18%; background-size: 100% center;}
+        div#q2{background-position: center; background-size: 100% center;}
+        div#q3{background-position: center 82%; background-size: 100% center;}
+
+        /*
+        Posição da imagem:
+
+        Usando transformações e posicionamento absoluto:
+Outra abordagem é usar posicionamento absoluto e transformações CSS. Nesse caso, a div é posicionada no centro da tela usando top: 50% e left: 50%, juntamente com a transformação translate(-50%, -50%) para ajustar o seu posicionamento. Veja um exemplo:
+
+css
+.div-centralizada {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+html
+<div class="div-centralizada">
+  <!-- Conteúdo da div -->
+</div>
+Essas é apenas uma maneira de centralizar uma div na tela.
+
+
+	background-position:     posição horizontal     posição vertical	
+
+
+ Obs:	    vh	->	altura da view port (height)
+	        vw	->	largura da view port (width)
+            
+    	    background-position: left top;		-> esquerda topo
+	        Background-position: left center;	-> esquerda centro
+            background-position: right bottom;	-> direita embaixo
+            background-position: center center;	-> centro centro
+*/
+    </style>
+</head>
+<body>
+    <div class="bloco" id="q1"></div>
+    <div class="bloco" id="q2"></div>
+    <div class="bloco" id="q3"></div>
+
+    <h1>Teste de Imagem fixa</h1>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iure rerum optio numquam laborum, architecto quos, fugiat non assumenda eligendi excepturi est unde nemo odio dolorum hic minus repellendus temporibus quod? Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste delectus aut libero, fugit id eum eveniet eos odit nihil similique illo amet. Amet, eum minus fugiat delectus deleniti laboriosam quam? Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam labore distinctio dicta consectetur soluta quisquam nesciunt officiis laborum cupiditate nihil est pariatur numquam, magni deserunt animi, eaque fuga? Sit, laudantium. Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam corrupti aut quasi fuga quibusdam illum placeat porro quia soluta aliquam amet minima sit est atque obcaecati perferendis aliquid, quae sequi.</p>
+
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, reprehenderit. Illum, laborum pariatur. Deleniti, totam. Consectetur recusandae error expedita, voluptate eligendi magni labore non voluptatibus reprehenderit deserunt, ducimus dicta iure. Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, at? Incidunt atque dolorem sint illo distinctio tenetur culpa. Nobis molestias quae est aliquid atque eaque ullam reiciendis? Minus, aliquid facere!
+    </p>
+</body>
+</html>
