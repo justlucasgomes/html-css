@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundo Fixo de Tela</title>
+    <style>
+        body{
+            background-color: black;
+            background-image: url(image/wallpaper002.jpg);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 100vh;
+            background-attachment: fixed;
+        }
+        main{
+            background-color: white;
+            border-radius: 10px;
+            width: 400px;
+            padding: 10px;
+            margin: auto;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+            /*Quando travamos o nosso background, significa que mesmo que o conteúdo da página seja scrollado, o fundo se mantem fixo... Sem quebras de repetição o bordas, isso se chama "vínculo".
+
+Para fazer isso, usamos a Propriedade de Estilo " background-attachment ", essa propriedade configura a relação do vínculo do background. Basicamente essa propriedade aceitas dois valores, que são:
+
+scroll - Esse é o valor padrão, se não determinarmos nada, é esse valor que vai prevalecer. Faz o fundo (imagem de fundo) rolar junto com o conteúdo da página.
+
+fixed - A imagem de fundo ficará fixa (travada) enquanto o conteúdo vai sendo rolado.
+
+Como vimos anteriormente, existem muitas Propriedades de Estilo para o background, entretanto é possível simplificar todos elas em uma declaração shorthand... A propriedade abreviada (shorthand) " background " deve ser declarada, agrupando e seguindo a ordem das seguintes configurações:
+
+background-color
+background-image
+background-position 
+background-repeat 
+background-attachment
+
+Exemplo da shorthand:
+
+background: black url(imagens/wallpaper003.jpg) center center no-repeat fixed;
+
+Sendo assim... No lugar de declarar individualmente, linha por linha, todas as propriedades background apresentadas até aqui, usamos a declaração shorthand simplificada do exemplo acima.
+
+Observação: É possível declarar essa shorthand, na ordem orientada, mas com a propriedade background-size inserida como o antepenúltimo valor (depois do background-position)... Entretanto, para isso de fato funcionar, teremos que colocar uma barra ( / ) sem espaçamento antes do valor do size. O background-size inserido na shorthand sem essa barra simplesmente resultará num erro.
+
+Exemplo:
+
+background: black url(imagens/teste03.gif) center center/cover no-repeat fixed;
+
+Se não quiser inserir a propriedade background-size com a barra na shorthand, é só declarar individualmente.*/
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>Teste de Imagem de Fundo</h1>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fuga facere at nisi quibusdam sed quod consequatur explicabo quasi magni error? Tempora recusandae quibusdam omnis inventore quia quidem voluptate odit fugiat?Lorem ipsum dolor sit amet consectetur adipisicing elit. At vero voluptas magnam laboriosam? Corrupti ex, eius aut voluptate eaque porro dolorem impedit officiis dolores vel eligendi fugiat libero facere sunt.lorem Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam ratione ad quia vero ea odio quibusdam! Soluta repellendus quas accusantium. Explicabo sunt quas culpa, eaque quibusdam error aperiam minus corrupti?</p>
+    </main>
+</body>
+</html>

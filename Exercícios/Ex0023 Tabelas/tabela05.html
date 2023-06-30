@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabela</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        table {
+            border-collapse: collapse;
+            width: 500px;
+        }
+        caption{
+            font-size: 1.3;
+            font-weight: bold;
+            padding: 10px;
+        }
+        th{
+            border: 1px solid black;
+            padding: 8px;
+            text-align: center;
+        }
+        td{
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+        }
+        .destaque{
+            background-color: lawngreen;
+        }
+        div#container{
+            overflow-x: auto; /* Para deixar responsivo na lateral*/
+        }
+        /*📝 AGRUPANDO COLUNAS:
+
+Na parte de HTML:
+
+   Ex:	<table>
+        		<colgroup>
+            		        <col class="cnome">
+            		        <col class="c s e x o">
+            		        <col class="cidade">
+            		        <col class="cprof">
+        		</ colgroup>
+		.
+		.
+
+Na parte de CSS:
+
+   Ex:		col cnome {
+            		        background-color: yellow;
+       	 	        }
+		        col  c s e x o {
+			        background-color: green;
+       	 	        }
+		        .
+		        .
+
+Para grupo de colunas:
+
+   Ex:	HTML:	<colgroup>
+            		                <col class="cnome">
+            		                <col class="cgrupo" span="2">	(2 colunas serão formatadas)
+            		                <col class="cprof">
+        		        </ colgroup>
+
+	        CSS:	col cgrupo {
+            		                background-color: red;
+		                }*/
+    </style>
+
+</head>
+<body>
+    <h1>Agrupando</h1>
+
+    <div id="container">
+        <table>
+            <caption>Cadastro</caption>
+            <tr>
+                <th scope="col" class="destaque">Nome</th>
+                <th scope="col">Sexo</th>
+                <th scope="col">Idade</th>
+                <th scope="col">Profissão</th>
+            </tr>
+            <tr>
+                <td class="destaque">Ana Maria</td>
+                <td>Fem</td>
+                <td>25</td>
+                <td>Jornalista</td>
+            </tr>
+                <td class="destaque">Carina</td>
+                <td>Fem</td>
+                <td>19</td>
+                <td>Auxiliar de Produção</td>
+            </tr>
+                <td class="destaque">Denilson</td>
+                <td>Mas</td>
+                <td>20</td>
+                <td>Pedreiro</td>
+            </tr>
+                <td class="destaque">Carolina</td>
+                <td>Fem</td>
+                <td>22</td>
+                <td>Professora</td>
+            </tr>
+                <td class="destaque">Luana</td>
+                <td>Fem</td>
+                <td>17</td>
+                <td>Vendedora</td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>
