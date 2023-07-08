@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>formulário</title>
+    <style>
+        *{
+            font-family: Arial, Helvetica, sans-serif;
+            /*Input de texto:
+
+	<input type="text" name=" " id=" ">
+
+	Ex:	<p>
+			<label for="iusu">Usuário: </label>
+			<input type="text" name="usu" id="iusu">
+	       </p>
+
+
+Input de senha:
+
+	<input type="password" name=" " id=" ">
+
+	Ex:	<p>
+            		<label for="isen">Senha: </label>
+            		<input type="password" name="sen" id="isen">
+        	</p>
+
+
+Input para limpar formulário:
+
+	<input type="reset" value=" ">
+
+	Ex:	<p>
+            		<input type="reset" value="Limpar">
+        	</p>
+
+
+Criar campo de preenchimento obrigatório:
+
+	- Usar no input o parâmetro: required
+
+	Ex:	<input type="text" name="usu" id="iusu" required>
+	
+		<input type="password" name="sen" id="isen" required>
+
+
+Tamanho mínimo e máximo de caracteres:
+
+	minlength=" "		maxlength=" "
+
+	Ex:	<input type="text" name="usu" id="iusu" required minlength="5" maxlength="15">
+
+		<input type="password" name="sen" id="isen" required minlength="8" maxlength="20">
+
+
+Largura da caixa de texto (em nº de caracteres):
+
+	size=" "
+
+	Ex:	 <input type="text" name="usu" id="iusu" required minlength="5" maxlength="15"  size="10">
+
+		<input type="password" name="sen" id="isen" required minlength="8" maxlength="20" size="8">
+
+
+Usando placeholder (dica de preenchimento):
+
+	placeholder=" "
+
+	Ex:	<input type="text" name="usu" id="iusu" required minlength="5" maxlength="15" size="10" placeholder="nome do  
+                usuário">
+
+
+		<input type="password" name="sen" id="isen" required minlength="8" maxlength="20" size="12" placeholder="mínimo 
+                8 letras">
+
+
+
+Autocomplete dentro do input (informação do que será preenchido):
+
+	1) Dentro da tag <form>, devemos ter autocomplete="on";
+	2) Dentro do input, inserir mais um autocomplete=" ". Nesse caso teremos mais opções
+	de preenchimento (ex: nickname, username, organization, current password,...).
+
+   Ex:   <form action="cadastro.php" method="post" autocomplete="on">
+	           <p>
+          	        <label for="iusu">Usuário: </label>
+	                <input type="text" name="usu" id="iusu" required minlength="5" maxlength="15" size="10" placeholder="nome do 
+                         usuário" autocomplete="username">
+
+	          </p>
+	  </form>*/
+        }
+    </style>
+</head>
+<body>
+    <h1>Teste de formulário</h1>
+    <form action="cadastro.php" method="post" autocomplete="on"></form>
+    <p>
+       <label for="iusu">Usuário</label>
+        <Input type="text" name="usu" id="iusu" required minlength="5" maxlength="20" size="22" placeholder="min 5 caracteres" autocomplete="username">
+    </p>
+    <p>
+        <label for="isen">Senha</label>
+         <Input type="password" name="sen" id="isen" required minlength="8" maxlength="15" size="22" placeholder="min 8 caracteres" autocomplete="current-password">
+     </p>
+    <p>
+        <input type="submit" value="Enviar">
+        <input type="reset" value="Limpar">
+    </p>
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulários</title>
+    <style>
+        *{
+            font-family: Arial, Helvetica, sans-serif;
+            /*Quando vamos preencher um formulário, ao clicarmos em determinadas caixas de texto é possível que o navegador do usuário auxilie da digitação dos dados com o a ferramenta "autocomplete" (preenchimento automático do campo). Quando essa ferramenta é ativada, uma janela com sugestões é exibida para que o usuário possa escolher algum dado... Acontece que em algumas situações pode ser que o autocomplete atrapalhe na visibilidade dos campos, poluindo o nosso formulário.
+
+Nesses casos, se você quiser é possível desligar o autocomplete... Para fazer isso, dentro da tag de abertura do formulário (<form>), basta adicionar o parâmetro " autocomplete " com o valor "off".
+
+PARA ONDE MANDAR OS DADOS DE UM FORMULÁRIO?
+
+Depois que você criar um formulário simples em HTML, é possível preencher os campos e até mesmo clicar no botão "Enviar"... Entretanto os dados simplesmente somem ao clicar no botão. Para onde os dados de um formulário devem ir depois que o usuário faz a submissão? 
+
+Normalmente nós vamos mandar e encaminhar os dados para alguma linguagem de programação, como por exemplo: ASP, Java, PHP, JavaScript e por aí vai...
+
+Para de fato encaminhar os dados do formulário para alguma linguagem, dentro da tag de abertura do formulário (<form>), temos que configurar o atributo " action " (por padrão esse atributo já vem embutido dentro da tag form)... Como valor desse atributo, devemos inserir o nome do script que vai receber os dados (ex: cadastro.php).
+
+Obs.: Sim, para poder cadastrar os dados do formulário, é necessário criar um script, um programa... Que terá como função justamente essa finalidade de cadastro.
+
+Depois de configurar o atributo "action" especificando o script que vai receber os dados, a ação desse atributo só vai ser disparada (iniciando o envio dos dados do formulário) quando o usuário clicar no botão "Enviar" (input submit), no botão de submissão do form...
+
+*Se você colocar como valor de "action" um nome fictício de um script que não existe, ao clicar em "Enviar" no formulário, simplesmente irá ocorrer um erro, já que o sistema não vai encontrar o arquivo desse script. 
+
+INPUTS (COMPONENTE DE ENTRADA) E OS ATRIBUTOS "NAME" E "ID":
+
+Na maioria dos tipos de input para formulários (componentes de entrada de dados), é necessário ter os atributos "name" e "id"... Ao inserir um componente, por padrão esses dois atributos já acompanham a tag de input. Você pode dar a mesma nomenclatura para ambos se quiser.
+
+Sobre o parâmetro " name ", de certa maneira ele serve para identificar um elemento, assim como o parâmetro "id" faz...
+
+De forma geral, pode-se dizer que:
+
+ID: O id é importante para o browser (front-end), para a manipulação do DOM (arvore do documento), CSS e usado para criar o VÍNCULO entre a nossa label e o seu respectivo componente.
+
+NAME: O name é importante para o servidor/linguagens de programação (back-end) e o HTML.
+
+O name é principalmente usado para elementos do tipo input em forms, ou seja para campos de inserção de dados e é exatamente o name que identifica no servidor o campo.
+
+Vale lembrar que o valor do id deve ser único para cada documento, já o valor do name pode ocorrer mais de uma vez por documento. 
+
+Obs.: Como foi dito, o atributo name é muito usado na parte do servidor nas linguagens de programação, entretanto ele é mais útil especificamente para algumas linguagens, como o PHP por exemplo... Já para linguagens como o JavaScript, o id é mais utilizado, mesmo sendo para o servidor... (No JS até dá para identificar e puxar o campo usando o name, mas o id é o considerado padrão para a linguagem).
+
+Dessa maneira, entenda que você sempre precisa identificar todos os inputs (componentes de entrada) do formulário com um name e com um id, ambos tem suas funções. (a única exceção para isso seria o botão de submissão, que mesmo sendo um input não necessita desses atributos de identificação, visto que não recebe dados e não tem etiqueta).
+
+VÍNCULO ENTRE LABELS E COMPONENTES:
+
+É muito importante que exista um vínculo entre a label e o seu respectivo componente... O navegador não é inteligente o suficiente para saber que determinada etiqueta está ligada a tal componente, por isso essa configuração de ligação deve ser feita...
+
+Para fazer essa ligação, estabelecer esse vínculo entre a label e o componente, na tag da etiqueta <label> devemos usar o atributo " for " (por padrão esse atributo já vem embutido dentro da tag label).
+
+Como valor de "for", você deve justamente inserir o nome do id do respectivo componente de entrada da label.
+
+Obs.: Geralmente damos a mesma nomenclatura para o name e o id de um componente input, mas também existe a possibilidade de dar nomenclaturas diferentes para esses atributos.
+
+Considerando que o atributo name e id do seu componente possuem nomenclaturas diferentes: Para o valor de "for", obrigatoriamente usamos sempre o id, visto que "for" só aceita o id para criar o vínculo entre a label e o respectivo input. (se as nomenclatura de name e id forem iguais, o 'for' usa o id do mesmo jeito).
+
+Depois que você configurar o atributo "for" da sua label com o id do input, o vínculo entre essa label e o input estará firmado.
+
+Nota: Não se cria um formulário sem relacionar o label ao input, é importantíssimo que você sempre estabeleça o vínculo. Caso contrário isso vai dificultar o trabalho dos mecanismos de busca, do HTML e consequentemente do seu navegador, visto que eles não irão saber qual caixa input está relacionada com qual label...
+
+Depois de estabelecer o vínculo, visualmente o nosso formulário estará igual, no entanto a parte semântica estará funcionando adequadamente e é isso que mais importa.
+
+Fora que, criando a ligação, ao clicar diretamente na label na página, a sua respectiva caixa de componente vinculada fica sinalizada e o cursor de texto da caixa (se for uma caixa de texto) é ativado, selecionando a caixa. 
+
+Isso pode ser útil principalmente para usuários de celular, visto que a tela é menor e muitas vezes ocorre do user errar o clique com o dedo... Apertar num ponto específico no celular às vezes pode ser complicado, um label vinculado adequadamente significa uma área maior de sensibilidade, ajudando na experiência do usuário durante a utilização e preenchimento do formulário.
+
+QUANDO USAR GET OU POST?
+
+Em que momentos devemos utilizar o GET ou POST?
+
+GET: Basicamente você vai usar o método de envio HTTP GET quando os dados que serão enviados não forem sensíveis. Por exemplo: Nome da pessoa, peso (KG) ou buscas no estilo Google... (Quando o usuário não faz uma busca que é secreta). busca de até até 3.000 letras 3 mil bits.
+
+POST: Existem momentos que a utilização do método POST é obrigatória. Utilize o método de envio HTTP POST quando os dados que serão enviados forem sensíveis, quando você não quiser que eles apareçam na URL. */
+        }
+    </style>
+</head>
+<body>
+    <h1>Meu primeiro formulário</h1>
+    <form action="cadastro.php" method="post" autocomplete="off">
+        <p><label for="inome">Nome:</label> 
+            <input type="text" name="nome" id="inome"></p>
+        <p><label for="isobrenome">Sobrenome:</label> 
+            <input type="text" name="sobrenome" id="isobrenome"></p>
+        <p><input type="submit" value="ENVIAR"></p>
+    </form>
+</body>
+</html>

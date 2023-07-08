@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+</head>
+<body>
+    <h1>Exemplo de Formulário</h1>
+    <form action="cadastro.php" method="post" autocomplete="on"></form>
+    <p>
+        <label for="icor">Cor:</label>
+        <input type="color" name="cor" id="icor">
+        <!-- Input:color
+
+	<input type="color" name=" " id=" ">
+
+   - Pode ser definida uma cor inicial, usando o atributo value=" ". -->
+    </p>
+    <p>
+        <label for="inivel">Nível de Satisfação:</label>
+        <input type="range" name="nível" id="inivel" min="1" max="5" value="2">
+        <!-- Input:range
+
+	<input type="range" name=" " id=" ">
+
+   - Por padrão, o range começa sempre em 50 (no meio), variando de 0 a 100, mas pode ser personalizado, utilizando os atributos value=" ", min=" " e max=" ", respectivamente. -->
+    </p>
+    <p>
+        <label for="ifoto">Foto:</label>
+        <input type="file" name="foto" id="ifoto">
+    </p>
+    <!-- Input:file
+
+	<input type="file" name=" " id=" ">
+
+	- Ao trabalhar com input:file, usar sempre o atributo method="POST" dentro da tag <form>, para que não haja uma limitação de 3.000 bites no envio do arquivo. -->
+    <p>
+        <input type="submit" value="Enviar">
+        <input type="reset" value="Limpar">
+    </p>
+</body>
+</html>
