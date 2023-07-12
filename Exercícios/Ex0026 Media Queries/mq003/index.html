@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Queries</title>
+    <!--"As Media Queries são usadas para criar layouts responsivos"-->
+    <style>
+        /*declarações gerais*/
+        * {
+        margin: 0px;
+        padding: 0px;
+        font-family: Arial, Helvetica, sans-serif;
+        }
+
+        html, body {
+        width: 100vw;
+        height: 100vh;
+        background-color: rgb(46, 46, 46);
+        background-size: contain;
+        }
+        h1, p {
+        color: white;
+        text-align: center;
+        text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.425);
+        padding: 10px;
+        width: 60vw;
+        }
+            /*declarações retrato*/
+        @media screen and (orientation: portrait)
+        {
+        body {
+        background-color: rgb(78, 78, 58);
+        background: url(../imagens/cev-portrait.jpg) no-repeat;
+        background-position: center bottom;
+        }}
+            /*declarações paisagem*/
+        @media screen and (orientation: landscape) 
+        {
+        body { 
+        background-color: rgb(138, 108, 70);
+        background: url(../imagens/cev-landscape.jpg) no-repeat;
+        background-position: left bottom;
+        }}
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Mude a orientação do seu dispositivo</h1>
+    </header>
+    <main>
+        <p>
+            <span>Nesse</span> exercício pego como referência o exercício anterior, porém utilizaremos a penas um estilo.
+            O código index foi utilizado o mesmo, porém apagamos os links css's e adicionamos um style, onde separamos por estilo geral, estilo retrato, estilo paisagem dentro de  um unico style. o Geral basta copiar e colar; já o Retrato adicionamos o @media screen and (orientation: portrait) {e aqui no meio colamos o código}, o mesmo acontece com o Paisagem onde adicionamos @media screen and (orientation: landscape) 
+            {e aqui colamos o código}.
+        </p>
+    </main>
+</body>
+</html>

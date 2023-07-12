@@ -1,0 +1,9 @@
+@charset "UTF-8";
+
+/* Aparelho em Pé - retrato (portrait) */
+
+body {
+    background-color: rgb(78, 78, 58);
+    background: url(../imagens/cev-portrait.jpg) no-repeat;
+    background-position: center bottom;
+}
